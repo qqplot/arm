@@ -1,4 +1,4 @@
-*Henrik will be offline Dec 2 - Dec 14 so responses to some questions may be slower during this time period.*
+*Modified by qqplot*
 
 # Adaptive Risk Minimization: Learning to Adapt to Domain Shift
 
@@ -12,12 +12,35 @@ The structure of this repo and the way certain details around the training loop 
     * Train
     * Evaluate
 
-## Environment
+## Environment for M1 Mac
 
-python version: 3.6.5
-
+(origin) python version: 3.6.5
 Using pip
  - `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
+
+(for M1 Mac) python version: 3.8.13
+Using pip
+ - `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
+
+As M1 user, I need to use mini-forge which need to the python version >= 3.8. So I had to install upper version for some packages(scipy, numpy, scikit_learn etc).  
+*install mini-forge ([link](https://qqplot.github.io/datascience/2022/01/08/install_tensorflow_in_mac_m1.html))* 
+
+If you cannot install packages for M1, try `conda install` like the below.
+Using conda-forge channel like this
+```shell
+conda install -n arm -c conda-forge scipy=1.5.2=py38h2dbcbbe_2
+conda install -n arm -c conda-forge scikit-learn=0.23.2=py39hb966dd2_3
+conda install -c conda-forge albumentations
+```
+
+And install some packages about `tensorflow` for mac to use GPU framework in M1
+```shell
+conda install -c apple tensorflow-deps
+pip install tensorflow-macos
+pip install tensorflow-metal
+```
+
+
 
 ## Logging results.
 Weights and Biases, which is an alternative to Tensorboard, is used to log results in the cloud. This is used for both training and evaluating on the test set.
