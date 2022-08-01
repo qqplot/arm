@@ -16,14 +16,18 @@ The structure of this repo and the way certain details around the training loop 
 
 (origin) python version: 3.6.5
 Using pip
- - `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
+ - `pip install -r requirements_origin.txt` or `pip3 install -r requirements_origin.txt`
 
 (for M1 Mac) python version: 3.8.13
 Using pip
  - `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
 
-As M1 user, I need to use mini-forge which need to the python version >= 3.8. So I had to install upper version for some packages(scipy, numpy, scikit_learn etc).  
-*install mini-forge ([link](https://qqplot.github.io/datascience/2022/01/08/install_tensorflow_in_mac_m1.html))* 
+As M1 user, I need to use mini-forge which need to the python version(>= 3.8.). 
+So I had to install upper version for some packages(scipy, numpy, scikit_learn etc).
+
+
+*Guide to install mini-forge ([link](https://qqplot.github.io/datascience/2022/01/08/install_tensorflow_in_mac_m1.html))* 
+
 
 If you cannot install packages for M1, try `conda install` like the below.
 Using conda-forge channel like this
