@@ -14,11 +14,16 @@ The structure of this repo and the way certain details around the training loop 
 
 ## Environment for M1 Mac
 
+**I am trying to use GPU(mps in torch) in M1 mac.\
+If you have any advice, please contact me.**
+
 (origin) python version: 3.6.5
+
 Using pip
  - `pip install -r requirements_origin.txt` or `pip3 install -r requirements_origin.txt`
 
 (for M1 Mac) python version: 3.8.13
+
 Using pip
  - `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
 

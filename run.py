@@ -169,8 +169,9 @@ if __name__ == '__main__':
     args = get_parser().parse_args()
 
     # Cuda
-    if torch.cuda.is_available():
-        args.device = torch.device('cuda')
+    # modified for m1 (from 'gpu' to 'mps')
+    if torch.backends.mps.is_available():
+        args.device = torch.device('mps')
         args.cuda = True
     else:
         args.device = torch.device('cpu')
